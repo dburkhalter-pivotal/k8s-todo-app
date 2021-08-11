@@ -1,9 +1,10 @@
 load("@ytt:data", "data")
-
+#! dib - 11.aout - add tag in version field
 def labels_for_component(comp):
   return {
     "app.kubernetes.io/name": comp,
     "app.kubernetes.io/part-of": data.values.APP,
+    "app.kubernetes.io/version": image_tag_for_component(comp),
   }
 end
 

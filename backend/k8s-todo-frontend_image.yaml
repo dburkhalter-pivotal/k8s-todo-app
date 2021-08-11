@@ -1,0 +1,37 @@
+apiVersion: kpack.io/v1alpha1
+kind: Image
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: '{"kind":"Image","apiVersion":"kpack.io/v1alpha1","metadata":{"name":"k8s-todo-frontend","namespace":"default","creationTimestamp":null},"spec":{"tag":"harbor.withtanzu.com/pa-dburkhalter/k8s-todo-frontend","builder":{"kind":"ClusterBuilder","name":"default"},"serviceAccount":"default","source":{"registry":{"image":"harbor.withtanzu.com/pa-dburkhalter/k8s-todo-frontend-source@sha256:e840373d8bbd63cf780558a131357eb384b255ee1f8e10766d613a0928371540"}},"build":{"env":[{"name":"BP_OCI_DESCRIPTION","value":"k8s-todo-app
+      Application"},{"name":"BP_IMAGE_LABELS","value":"relise=\"k8s-todo-frontend
+      v0.13.0 - 10.aout.2021\""},{"name":"BP_OCI_AUTHORS","value":"Tanzu South EMEA"},{"name":"BP_OCI_TITLE","value":"Spring
+      Boot k8s-todo-frontend"},{"name":"BP_OCI_DOCUMENTATION","value":"created on
+      10.aout.2021"},{"name":"BP_NGINX_VERSION","value":"1.21.0"}],"resources":{}}},"status":{}}'
+  creationTimestamp: null
+  name: k8s-todo-frontend
+  namespace: default
+spec:
+  build:
+    env:
+    - name: BP_OCI_DESCRIPTION
+      value: k8s-todo-app Application
+    - name: BP_IMAGE_LABELS
+      value: relise="k8s-todo-frontend v0.13.0 - 10.aout.2021"
+    - name: BP_OCI_AUTHORS
+      value: Tanzu South EMEA
+    - name: BP_OCI_TITLE
+      value: Spring Boot k8s-todo-frontend
+    - name: BP_OCI_DOCUMENTATION
+      value: created on 10.aout.2021
+    - name: BP_NGINX_VERSION
+      value: 1.21.0
+    resources: {}
+  builder:
+    kind: ClusterBuilder
+    name: default
+  serviceAccount: default
+  source:
+    registry:
+      image: harbor.withtanzu.com/pa-dburkhalter/k8s-todo-frontend-source@sha256:e840373d8bbd63cf780558a131357eb384b255ee1f8e10766d613a0928371540
+  tag: harbor.withtanzu.com/pa-dburkhalter/k8s-todo-frontend
+status: {}

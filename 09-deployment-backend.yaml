@@ -1,0 +1,56 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: todo-dev
+  labels:
+    app.kubernetes.io/name: backend
+    app.kubernetes.io/part-of: k8s-todo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: backend
+      app.kubernetes.io/part-of: k8s-todo
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: backend
+        app.kubernetes.io/part-of: k8s-todo
+    spec:
+      containers:
+      - name: backend
+        image: harbor.withtanzu.com/pa-dburkhalter/k8s-todo-backend:b3.20210810.104615
+        resources:
+          requests:
+            memory: 1G
+          limits:
+            memory: 1G
+        ports:
+        - name: http
+          containerPort: 8080
+        livenessProbe:
+          httpGet:
+            port: http
+            path: /actuator/health/liveness
+        readinessProbe:
+          httpGet:
+            port: http
+            path: /actuator/health/readiness
+        env:
+        - name: SPRING_CONFIG_IMPORT
+          value: configtree:/etc/config/*/
+        volumeMounts:
+        - mountPath: /etc/config/db
+          name: db
+        - mountPath: /etc/config/db-secret/spring.datasource.password
+          name: db-secret
+          subPath: password
+      volumes:
+      - name: db
+        secret:
+          secretName: db
+      - name: db-secret
+        secret:
+          secretName: pgdb-db-secret

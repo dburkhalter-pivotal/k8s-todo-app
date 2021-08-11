@@ -7,7 +7,10 @@ APP: k8s-todo
 NAMESPACE: todo
 
 #! Set image repository where to find container images.
-IMAGE_REPOSITORY: index.docker.io/alexandreroman
+#! IMAGE_REPOSITORY: index.docker.io/alexandreroman
+#! dib - 10.aout switch to harbor repo
+#! docker pull harbor.withtanzu.com/pa-dburkhalter/k8s-todo-app@sha256:fa2a276f778c7e8301a9dd8f4cec2fde17dbfd51a41c8122f0e8b03ace007e71
+IMAGE_REPOSITORY: harbor.withtanzu.com/pa-dburkhalter
 
 #! Set the public-facing domain used for accessing the application.
 DOMAIN: k8s-todo.example.com

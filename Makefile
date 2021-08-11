@@ -1,6 +1,7 @@
 # Override this parameter when invoking make CLI:
 #  $ make package IMAGE_REPOSITORY=myregistry/myrepo
-IMAGE_REPOSITORY = index.docker.io/alexandreroman
+# IMAGE_REPOSITORY = index.docker.io/alexandreroman
+IMAGE_REPOSITORY = harbor.withtanzu.com/pa-dburkhalter
 
 FRONTEND_GENERATED_CONTENT = frontend/js/vue.min.js frontend/js/director.min.js frontend/js/axios.min.js frontend/js/axios.min.map frontend/css/styles.css
 
@@ -13,6 +14,7 @@ package: package-frontend package-backend
 
 package-frontend: build-frontend
 	pack build -B "paketobuildpacks/builder:base" -b gcr.io/paketo-buildpacks/nginx -p frontend ${IMAGE_REPOSITORY}/k8s-todo-frontend
+	docker push harbor.withtanzu.com/pa-dburkhalter/k8s-todo-frontend
 
 package-backend: build-backend
 	cd backend && ./mvnw -DskipTests spring-boot:build-image -Dspring-boot.build-image.imageName=${IMAGE_REPOSITORY}/k8s-todo-backend

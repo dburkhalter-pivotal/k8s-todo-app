@@ -1,0 +1,216 @@
+[0;36m===> PREPARE
+[0mBuild reason(s): CONFIG
+CONFIG:
+	env:
+	- name: BP_JVM_VERSION
+	  value: 16.*
+	- name: BP_OCI_DESCRIPTION
+	  value: k8s-todo-app Application
+	- name: BP_IMAGE_LABELS
+	  value: relise="k8s-todo-backend v0.20.0 - 10.aout.2021"
+	- name: BP_OCI_AUTHORS
+	[31m-[0m [31m  value: Tanzu South EMEA[0m
+	[32m+[0m [32m  value: tanzu-south-emea[0m
+	- name: BP_OCI_TITLE
+	  value: Spring Boot k8s-todo-backend
+	- name: JBP_LOG_LEVEL
+	  value: info
+	- name: BP_OCI_DOCUMENTATION
+	[31m-[0m [31m  value: updated on 10.aout.2021[0m
+	[32m+[0m [32m  value: updated on 12.aout.2021[0m
+	- name: BP_OCI_SOURCE
+	  value: https://github.com/dburkhalter-pivotal/k8s-todo-app.git
+	- name: BP_DEBUG_ENABLED
+	  value: "true"
+	- name: BPL_DEBUG_ENABLED
+	  value: "true"
+	- name: BPE_OVERRIDE_BPL_JVM_THREAD_COUNT
+	  value: "120"
+	- name: BP_JMX_ENABLED
+	  value: "true"
+	- name: BPE_DELIM_JAVA_TOOL_OPTIONS
+	  value: ' '
+	- name: BPE_APPEND_JAVA_TOOL_OPTIONS
+	[31m-[0m [31m  value: ' -DRELISE=k8s-todo-backend_2021-08-10_v0.20.0 -Dspring.devtools.restart.enabled=true[0m
+	[32m+[0m [32m  value: ' -DRELISE=k8s-todo-backend_2021-08-11_v0.21.0 -Dspring.devtools.restart.enabled=true[0m
+	    -XX:MaxDirectMemorySize=64M -XX:+UnlockExperimentalVMOptions '
+	- name: BPL_JVM_HEAD_ROOM
+	  value: "15"
+	- name: BPL_SPRING_CLOUD_BINDINGS_ENABLED
+	  value: "y"
+	resources: {}
+	source:
+	[31m-[0m [31m  registry:[0m
+	[31m-[0m [31m    image: harbor.withtanzu.com/pa-dburkhalter/k8s-todo-backend-source@sha256:ceb8418b345938e2c24a8e4316b1369e69058d952bf9af485b8a302a1dbd6eaa[0m
+	[32m+[0m [32m  blob:[0m
+	[32m+[0m [32m    url: https://artifactory.withtanzu.com/artifactory/pa-dburkhalter/k8s-todo-backend.jar[0m
+Loading secret for "harbor.withtanzu.com" from secret "harbor" at location "/var/build-secrets/harbor"
+Loading secret for "registry.pivotal.io" from secret "dependency-updater-secret" at location "/var/build-secrets/dependency-updater-secret"
+Downloading artifactory.withtanzu.com/artifactory/pa-dburkhalter/k8s-todo-backend.jar...
+Successfully downloaded artifactory.withtanzu.com/artifactory/pa-dburkhalter/k8s-todo-backend.jar in path "/workspace"
+[0;36m===> DETECT
+[0m9 of 33 buildpacks participating
+paketo-buildpacks/ca-certificates       2.3.2
+paketo-buildpacks/bellsoft-liberica     8.2.0
+paketo-buildpacks/executable-jar        5.1.2
+paketo-buildpacks/dist-zip              4.1.2
+paketo-buildpacks/spring-boot           4.4.2
+paketo-buildpacks/debug                 3.1.2
+paketo-buildpacks/jmx                   3.1.2
+paketo-buildpacks/environment-variables 3.1.1
+paketo-buildpacks/image-labels          3.1.2
+[0;36m===> ANALYZE
+[0mRestoring metadata for "paketo-buildpacks/ca-certificates:helper" from app image
+Restoring metadata for "paketo-buildpacks/bellsoft-liberica:helper" from app image
+Restoring metadata for "paketo-buildpacks/bellsoft-liberica:java-security-properties" from app image
+Restoring metadata for "paketo-buildpacks/bellsoft-liberica:jre" from app image
+Restoring metadata for "paketo-buildpacks/bellsoft-liberica:jvmkill" from app image
+Restoring metadata for "paketo-buildpacks/spring-boot:helper" from app image
+Restoring metadata for "paketo-buildpacks/spring-boot:spring-cloud-bindings" from app image
+Restoring metadata for "paketo-buildpacks/spring-boot:web-application-type" from app image
+Restoring metadata for "paketo-buildpacks/debug:helper" from app image
+Restoring metadata for "paketo-buildpacks/jmx:helper" from app image
+Restoring metadata for "paketo-buildpacks/environment-variables:environment-variables" from app image
+[0;36m===> RESTORE
+[0m[0;36m===> BUILD
+[0m[34m[0m
+[34m[1mPaketo CA Certificates Buildpack[0m[34m 2.3.2[0m
+  [34;2;3mhttps://github.com/paketo-buildpacks/ca-certificates[0m
+  [34mLaunch Helper[0m: [32mReusing[0m cached layer
+[34m[0m
+[34m[1mPaketo BellSoft Liberica Buildpack[0m[34m 8.2.0[0m
+  [34;2;3mhttps://github.com/paketo-buildpacks/bellsoft-liberica[0m
+  [2mBuild Configuration:[0m
+[2m    $BP_JVM_VERSION              16.*            the Java version[0m
+  [2mLaunch Configuration:[0m
+[2m    $BPL_JVM_HEAD_ROOM           15              the headroom in memory calculation[0m
+[2m    $BPL_JVM_LOADED_CLASS_COUNT  35% of classes  the number of loaded classes in memory calculation[0m
+[2m    $BPL_JVM_THREAD_COUNT        250             the number of threads in memory calculation[0m
+[2m    $JAVA_TOOL_OPTIONS                           the JVM launch flags[0m
+  [34mBellSoft Liberica JRE 16.0.2[0m: [32mReusing[0m cached layer
+  [34mLaunch Helper[0m: [32mReusing[0m cached layer
+  [34mJVMKill Agent 1.16.0[0m: [32mReusing[0m cached layer
+  [34mJava Security Properties[0m: [32mReusing[0m cached layer
+[34m[0m
+[34m[1mPaketo Executable JAR Buildpack[0m[34m 5.1.2[0m
+  [34;2;3mhttps://github.com/paketo-buildpacks/executable-jar[0m
+  [34mClass Path[0m: [33mContributing[0m to layer
+[2m    Writing env/CLASSPATH.delim[0m
+[2m    Writing env/CLASSPATH.prepend[0m
+  Process types:
+    [36mexecutable-jar[0m: java org.springframework.boot.loader.JarLauncher (direct)
+    [36mtask[0m:           java org.springframework.boot.loader.JarLauncher (direct)
+    [36mweb[0m:            java org.springframework.boot.loader.JarLauncher (direct)
+[34m[0m
+[34m[1mPaketo Spring Boot Buildpack[0m[34m 4.4.2[0m
+  [34;2;3mhttps://github.com/paketo-buildpacks/spring-boot[0m
+  Creating slices from layers index
+[2m    dependencies[0m
+[2m    spring-boot-loader[0m
+[2m    snapshot-dependencies[0m
+[2m    application[0m
+  [34mLaunch Helper[0m: [32mReusing[0m cached layer
+  [34mSpring Cloud Bindings 1.7.1[0m: [32mReusing[0m cached layer
+  [34mWeb Application Type[0m: [33mContributing[0m to layer
+[2m    Servlet web application detected[0m
+[2m    Writing env.launch/BPL_JVM_THREAD_COUNT.default[0m
+  4 application slices
+  Image labels:
+    org.opencontainers.image.title
+    org.opencontainers.image.version
+    org.springframework.boot.version
+[34m[0m
+[34m[1mPaketo Debug Buildpack[0m[34m 3.1.2[0m
+  [34;2;3mhttps://github.com/paketo-buildpacks/debug[0m
+  [2mBuild Configuration:[0m
+[2m    $BP_DEBUG_ENABLED   true  whether to contribute debug support[0m
+  [2mLaunch Configuration:[0m
+[2m    $BPL_DEBUG_ENABLED  true  whether to enable debug support[0m
+[2m    $BPL_DEBUG_PORT     8080  what port the debug agent will listen on[0m
+[2m    $BPL_DEBUG_SUSPEND  n     whether the JVM will suspend execution until a debugger has attached[0m
+  [34mLaunch Helper[0m: [32mReusing[0m cached layer
+[34m[0m
+[34m[1mPaketo JMX Buildpack[0m[34m 3.1.2[0m
+  [34;2;3mhttps://github.com/paketo-buildpacks/jmx[0m
+  [2mBuild Configuration:[0m
+[2m    $BP_JMX_ENABLED   true  whether to contribute JMX support[0m
+  [2mLaunch Configuration:[0m
+[2m    $BPL_JMX_ENABLED        whether to enable JMX support[0m
+[2m    $BPL_JMX_PORT     5000  what port the JMX Connector will listen on[0m
+  [34mLaunch Helper[0m: [32mReusing[0m cached layer
+[34m[0m
+[34m[1mPaketo Environment Variables Buildpack[0m[34m 3.1.1[0m
+  [34;2;3mhttps://github.com/paketo-buildpacks/environment-variables[0m
+  Launch Configuration:
+[2m    $BPE_<NAME>         	 prepend value to $NAME, delimiting with OS path list separator[0m
+[2m    $BPE_APPEND_<NAME>  	 append value to $NAME[0m
+[2m    $BPE_DEFAULT_<NAME> 	 set default value for $NAME[0m
+[2m    $BPE_DELIM_<NAME>   	 set delimeter to use when appending or prepending to $NAME[0m
+[2m    $BPE_OVERRIDE_<NAME>	 set $NAME to value[0m
+[2m    $BPE_PREPEND_<NAME> 	 prepend value to $NAME[0m
+  [34mEnvironment Variables[0m: [33mContributing[0m to layer
+[2m    Writing env.launch/BPL_JVM_THREAD_COUNT.override[0m
+[2m    Writing env.launch/JAVA_TOOL_OPTIONS.append[0m
+[2m    Writing env.launch/JAVA_TOOL_OPTIONS.delim[0m
+[34m[0m
+[34m[1mPaketo Image Labels Buildpack[0m[34m 3.1.2[0m
+  [34;2;3mhttps://github.com/paketo-buildpacks/image-labels[0m
+  [2mBuild Configuration:[0m
+[2m    $BP_IMAGE_LABELS       relise="k8s-todo-backend v0.20.0 - 10.aout.2021"         arbitrary image labels[0m
+[2m    $BP_OCI_AUTHORS        tanzu-south-emea                                         the org.opencontainers.image.authors image label[0m
+[2m    $BP_OCI_CREATED                                                                 the org.opencontainers.image.created image label[0m
+[2m    $BP_OCI_DESCRIPTION    k8s-todo-app Application                                 the org.opencontainers.image.description image label[0m
+[2m    $BP_OCI_DOCUMENTATION  updated on 12.aout.2021                                  the org.opencontainers.image.documentation image label[0m
+[2m    $BP_OCI_LICENSES                                                                the org.opencontainers.image.licenses image label[0m
+[2m    $BP_OCI_REF_NAME                                                                the org.opencontainers.image.ref.name image label[0m
+[2m    $BP_OCI_REVISION                                                                the org.opencontainers.image.revision image label[0m
+[2m    $BP_OCI_SOURCE         https://github.com/dburkhalter-pivotal/k8s-todo-app.git  the org.opencontainers.image.revision image label[0m
+[2m    $BP_OCI_TITLE          Spring Boot k8s-todo-backend                             the org.opencontainers.image.title image label[0m
+[2m    $BP_OCI_URL                                                                     the org.opencontainers.image.url image label[0m
+[2m    $BP_OCI_VENDOR                                                                  the org.opencontainers.image.vendor image label[0m
+[2m    $BP_OCI_VERSION                                                                 the org.opencontainers.image.version image label[0m
+  Image labels:
+    org.opencontainers.image.authors
+    org.opencontainers.image.description
+    org.opencontainers.image.documentation
+    org.opencontainers.image.source
+    org.opencontainers.image.title
+    relise
+[0;36m===> EXPORT
+[0mReusing layers from image 'harbor.withtanzu.com/pa-dburkhalter/k8s-todo-backend@sha256:218c146274af001dc4d1f10e24dfb9a2ae5d762782def5df78845d4fc4273409'
+Reusing layer 'paketo-buildpacks/ca-certificates:helper'
+Reusing layer 'paketo-buildpacks/bellsoft-liberica:helper'
+Reusing layer 'paketo-buildpacks/bellsoft-liberica:java-security-properties'
+Reusing layer 'paketo-buildpacks/bellsoft-liberica:jre'
+Reusing layer 'paketo-buildpacks/bellsoft-liberica:jvmkill'
+Reusing layer 'paketo-buildpacks/executable-jar:classpath'
+Reusing layer 'paketo-buildpacks/spring-boot:helper'
+Reusing layer 'paketo-buildpacks/spring-boot:spring-cloud-bindings'
+Reusing layer 'paketo-buildpacks/spring-boot:web-application-type'
+Reusing layer 'paketo-buildpacks/debug:helper'
+Reusing layer 'paketo-buildpacks/jmx:helper'
+Adding layer 'paketo-buildpacks/environment-variables:environment-variables'
+Reusing 4/5 app layer(s)
+Adding 1/5 app layer(s)
+Reusing layer 'launcher'
+Adding layer 'config'
+Reusing layer 'process-types'
+Adding label 'io.buildpacks.lifecycle.metadata'
+Adding label 'io.buildpacks.build.metadata'
+Adding label 'io.buildpacks.project.metadata'
+Adding label 'org.opencontainers.image.title'
+Adding label 'org.opencontainers.image.version'
+Adding label 'org.springframework.boot.version'
+Adding label 'org.opencontainers.image.authors'
+Adding label 'org.opencontainers.image.description'
+Adding label 'org.opencontainers.image.documentation'
+Adding label 'org.opencontainers.image.source'
+Adding label 'org.opencontainers.image.title'
+Adding label 'relise'
+Setting default process type 'web'
+Saving harbor.withtanzu.com/pa-dburkhalter/k8s-todo-backend...
+*** Images (sha256:14785256939a5d149b31a967cc5833078b7484f0f62ae6e433fe9975af8d6b52):
+      harbor.withtanzu.com/pa-dburkhalter/k8s-todo-backend
+      harbor.withtanzu.com/pa-dburkhalter/k8s-todo-backend:b5.20210811.144839
+[0;36m===> COMPLETION
+[0mBuild successful

@@ -9,4 +9,18 @@ management:
   endpoints:
     web:
       exposure:
-        include: health, prometheus
+#        include: health, prometheus
+        include: "*"
+# dib - 9.aout
+# loggerLevel: trace
+logging:
+  level:
+#
+# Enable logging to verify that HikariCP is used, the second entry is specific to HikariCP
+    org.hibernate.SQL: info
+    org.hibernate: warn
+    org.hibernate.type.descriptor.sql.BasicBinder: warn
+ # 12.aout
+    com.zaxxer.hikari.HikariConfig: debug
+    # trace > info
+    com.zaxxer.hikari: info

@@ -1,0 +1,7 @@
+nginx:
+  # this allows you to specify a version constaint for the `NGINX` dependency
+  # any valid semver constaints (e.g. 1.* and 1.17.*) are also acceptable
+  #
+  # you can also specify "mainline" or "stable"
+  # dib: from doc : https://docs.pivotal.io/tanzu-buildpacks/nginx/nginx-buildpack.html#specifying-node-engine-version
+  version: 1.17.9
