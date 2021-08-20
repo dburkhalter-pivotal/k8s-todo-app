@@ -14,6 +14,11 @@
  * limitations under the License.
  */
 
+// make package-backend
+// then patch Image 
+// then get Image number in Harbor
+// then change values.yml
+
 package fr.alexandreroman.demos.k8s.todo.backend;
 
 import org.springframework.boot.SpringApplication;
@@ -21,14 +26,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @SpringBootApplication
 public class Application {
 
-    final static String RELISE = "Application v0.21.0 - 12.aout.2021 - 16:21";
+    final static String RELISE = "Application v0.24.0 - 20.aout.2021 - 16:01";
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
 
@@ -38,16 +42,19 @@ public class Application {
     private static final String MY_POD_NAMESPACE = "MY_POD_NAMESPACE";
     private static final String MY_POD_IP       = "MY_POD_IP";
     private static final String MY_POD_SERVICE_ACCOUNT = "MY_POD_SERVICE_ACCOUNT";
+    
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
 
         LOGGER.info("Starting:" + RELISE);
         // LOGGER.info("Starting:DEMO_GREETING:" + System.getenv(DEMO_GREETING));
-        LOGGER.info("Starting:MY_NODE_NAME:" + System.getenv(MY_NODE_NAME));
-        LOGGER.info("Starting:MY_POD_NAMESPACE:" + System.getenv(MY_POD_NAMESPACE));
-        LOGGER.info("Starting:MY_POD_NAME:" + System.getenv(MY_POD_NAME));
-        LOGGER.info("Starting:MY_POD_IP:" + System.getenv(MY_POD_IP));
-        LOGGER.info("Starting:MY_POD_SERVICE_ACCOUNT:" + System.getenv(MY_POD_SERVICE_ACCOUNT));
+        LOGGER.info("Starting:MY_NODE_NAME:" + System.getenv(MY_NODE_NAME) + ":");
+        LOGGER.info("Starting:MY_POD_NAMESPACE:" + System.getenv(MY_POD_NAMESPACE)+ ":");
+        LOGGER.info("Starting:MY_POD_NAME:" + System.getenv(MY_POD_NAME)+ ":");
+        LOGGER.info("Starting:MY_POD_IP:" + System.getenv(MY_POD_IP)+ ":");
+        LOGGER.info("Starting:MY_POD_SERVICE_ACCOUNT:" + System.getenv(MY_POD_SERVICE_ACCOUNT)+ ":");
+        LOGGER.info("Starting:availableProcessors:" + Runtime.getRuntime().availableProcessors() + ":");
+
     }
 }
 

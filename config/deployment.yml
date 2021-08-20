@@ -1,12 +1,16 @@
+#! 19.aout - dib
 #@ load("@ytt:data", "data")
-#@ load("helpers.star", "labels_for_component", "image_for_component")
+#@ load("helpers.star", "labels_for_component", "annotations_for_component", "image_for_component")
 ---
 apiVersion: apps/v1
 kind: Deployment
+#! https://github.com/paketo-buildpacks/nginx
 metadata:
   name: frontend
   namespace: #@ data.values.NAMESPACE
   labels: #@ labels_for_component("frontend")
+  #! didier
+  annotations: #@ annotations_for_component("frontend")
 spec:
   replicas: 1
   selector:
@@ -44,6 +48,8 @@ metadata:
   name: backend
   namespace: #@ data.values.NAMESPACE
   labels: #@ labels_for_component("backend")
+  #! didier
+  annotations: #@ annotations_for_component("backend")
 spec:
   replicas: 1
   selector:

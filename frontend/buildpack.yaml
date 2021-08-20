@@ -4,4 +4,4 @@ nginx:
   #
   # you can also specify "mainline" or "stable"
   # dib: from doc : https://docs.pivotal.io/tanzu-buildpacks/nginx/nginx-buildpack.html#specifying-node-engine-version
-  version: 1.17.9
+  version: 1.21.0

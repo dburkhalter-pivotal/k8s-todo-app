@@ -1,0 +1,30 @@
+apiVersion: projects.vmware.com/v1alpha1
+kind: Project
+# no matches for kind "Project" in version "projects.vmware.com/v1alpha1"
+metadata:
+  name: fr-tbs-project
+#
+  labels:
+    name: fr-tbs-project 
+    project: todo
+    scope: todo-app
+    # 
+    alerting: none
+    #
+    app.kubernetes.io/name: todo-tbs
+    app.kubernetes.io/version: "v0.1.0-2021-08-19"
+    app.kubernetes.io/component: k8s-demo-ns
+    app.kubernetes.io/part-of: todo
+#
+    app.kubernetes.io/instance: todo-tbs-ns-pez-us
+    app.kubernetes.io/managed-by: kubectl
+#
+  annotations:
+    relise: "v0.1.0-2021-08-19"
+#
+spec:
+   access:
+   - kind: User
+     name: burkhalterd@vmware.com
+   - kind: User
+     name: team-username-2@vmware.com

@@ -7,6 +7,8 @@ frontend/js/axios*.js
 frontend/js/axios*.map
 css/styles.css
 frontend.zip
+# dib
+*.output
 
 HELP.md
 target/

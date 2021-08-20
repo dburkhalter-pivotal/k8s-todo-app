@@ -1,0 +1,21 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+# kl apply -f tbs/tbs-cluster-role.yaml
+#
+metadata:
+  name: my-clusterrole-with-rbac-for-todo-project
+#
+  labels:
+    name: my-clusterrole-with-rbac-for-todo-project 
+    project: todo
+    scope: todo-app
+    # 
+    alerting: none
+    #
+rules:
+- apiGroups:
+  - example.k8s.io
+  resources:
+  - mycustomresource
+  verbs:
+  - "*"
