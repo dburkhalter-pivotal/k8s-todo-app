@@ -1,7 +1,7 @@
 # Override this parameter when invoking make CLI:
 #  $ make package IMAGE_REPOSITORY=myregistry/myrepo
 # IMAGE_REPOSITORY = index.docker.io/alexandreroman
-# 18.aout.2021
+# 25.aout.2021
 #
 IMAGE_REPOSITORY = harbor.withtanzu.com/pa-dburkhalter
 
@@ -18,11 +18,12 @@ package-frontend: build-frontend
 	pack build -B "paketobuildpacks/builder:base" -b gcr.io/paketo-buildpacks/nginx -p frontend ${IMAGE_REPOSITORY}/k8s-todo-frontend
 	docker push harbor.withtanzu.com/pa-dburkhalter/k8s-todo-frontend
 
-# 18 aout
+# 25 aout
 # make package-backend
 # then upload jar to artifactory
 package-backend: build-backend
 	cd backend && ./mvnw -DskipTests spring-boot:build-image -Dspring-boot.build-image.imageName=${IMAGE_REPOSITORY}/k8s-todo-backend
+	curl -X PUT -uadmin:HuvmVGCm56utAAv -T backend/target/k8s-todo-backend.jar "https://artifactory.withtanzu.com/artifactory/pa-dburkhalter/k8s-todo-backend.jar" -k -vv
 
 # Use this task to generate a zip file you may want to use with kpack / TBS
 # when building an image.

@@ -1,5 +1,5 @@
 load("@ytt:data", "data")
-#! dib - v0.25 - 19.aout - add tag in version field
+#! dib - v0.26 - 23.aout - add tag in version field
 def labels_for_component(comp):
   return {
     "app.kubernetes.io/name": comp,
@@ -7,7 +7,7 @@ def labels_for_component(comp):
     #
     "app.kubernetes.io/instance": "k8s-demo-ns-pez-us",
     "app.kubernetes.io/managed-by": "kubectl",
-#!    "app.kubernetes.io/version": image_tag_for_component(comp),
+#!  nok   "app.kubernetes.io/version": image_tag_for_component(comp),
   }
 end
 

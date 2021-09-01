@@ -1,0 +1,43 @@
+# from CoraI - to be tested
+# 23.aout
+# ?? kp lifecycle update
+#
+apiVersion: kpack.io/v1alpha1
+kind: ClusterStack
+metadata:
+  name: sample-stack
+spec:
+  id: "io.buildpacks.stacks.bionic"
+  buildImage:
+    image: "paketobuildpacks/build:base-cnb"
+  runImage:
+    image: "paketobuildpacks/run:base-cnb"
+---
+apiVersion: kpack.io/v1alpha1
+kind: ClusterStore
+metadata:
+  name: sample-store
+spec:
+  sources:
+#    - image: paketobuildpacks/builder:base
+    - image: gcr.io/paketo-buildpacks/builder:base
+---
+apiVersion: kpack.io/v1alpha1
+kind: Builder
+metadata:
+  name: sample-builder
+  namespace: kpack
+spec:
+  tag: gcr.io/my-account/sample-builder
+  serviceAccount: kpack-bot
+  stack:
+    name: sample-stack
+    kind: ClusterStack
+  store:
+    name: sample-store
+    kind: ClusterStore
+  order:
+    - group:
+        - id: paketo-buildpacks/java
+    - group:
+        - id: paketo-buildpacks/nodejs

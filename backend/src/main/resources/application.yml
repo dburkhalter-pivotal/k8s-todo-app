@@ -12,7 +12,7 @@ management:
 #        include: health, prometheus
         include: "*"
 # dib - 9.aout
-# loggerLevel: trace
+# 
 logging:
   level:
 #
@@ -21,6 +21,6 @@ logging:
     org.hibernate: warn
     org.hibernate.type.descriptor.sql.BasicBinder: warn
  # 12.aout
-    com.zaxxer.hikari.HikariConfig: debug
+    com.zaxxer.hikari.HikariConfig: info
     # trace > info
     com.zaxxer.hikari: info

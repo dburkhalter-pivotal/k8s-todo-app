@@ -32,15 +32,15 @@ import org.slf4j.LoggerFactory;
 @SpringBootApplication
 public class Application {
 
-    final static String RELISE = "Application v0.24.0 - 20.aout.2021 - 16:01";
+    final static String RELISE = "Application v0.27.1 - 25.aout.2021 - 14:19";
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
 
     // private final static String DEMO_GREETING = "DEMO_GREETING";
-    private final static String MY_POD_NAME     = "MY_POD_NAME";
-    private final static String MY_NODE_NAME    = "MY_NODE_NAME";
-    private static final String MY_POD_NAMESPACE = "MY_POD_NAMESPACE";
-    private static final String MY_POD_IP       = "MY_POD_IP";
+    private final static String MY_POD_NAME         = "MY_POD_NAME";
+    private final static String MY_NODE_NAME        = "MY_NODE_NAME";
+    private static final String MY_POD_NAMESPACE    = "MY_POD_NAMESPACE";
+    private static final String MY_POD_IP           = "MY_POD_IP";
     private static final String MY_POD_SERVICE_ACCOUNT = "MY_POD_SERVICE_ACCOUNT";
     
     public static void main(String[] args) {

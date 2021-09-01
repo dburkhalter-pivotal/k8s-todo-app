@@ -9,6 +9,7 @@ css/styles.css
 frontend.zip
 # dib
 *.output
+*.txt
 
 HELP.md
 target/

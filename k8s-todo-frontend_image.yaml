@@ -3,9 +3,9 @@ kind: Image
 metadata:
   annotations:
     kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"kpack.io/v1alpha1","kind":"Image","metadata":{"annotations":{},"creationTimestamp":"2021-08-10T14:17:21Z","generation":7,"managedFields":[{"apiVersion":"kpack.io/v1alpha1","fieldsType":"FieldsV1","fieldsV1":{"f:metadata":{"f:annotations":{".":{},"f:kubectl.kubernetes.io/last-applied-configuration":{}}},"f:spec":{".":{},"f:build":{".":{},"f:env":{},"f:resources":{}},"f:builder":{".":{},"f:kind":{},"f:name":{}},"f:serviceAccount":{},"f:source":{".":{},"f:registry":{".":{},"f:image":{}}},"f:tag":{}}},"manager":"kubectl-client-side-apply","operation":"Update","time":"2021-08-10T14:17:21Z"},{"apiVersion":"kpack.io/v1alpha1","fieldsType":"FieldsV1","fieldsV1":{"f:status":{".":{},"f:buildCacheName":{},"f:buildCounter":{},"f:conditions":{},"f:latestBuildImageGeneration":{},"f:latestBuildReason":{},"f:latestBuildRef":{},"f:latestImage":{},"f:latestStack":{},"f:observedGeneration":{}}},"manager":"controller","operation":"Update","time":"2021-08-18T15:27:34Z"}],"name":"k8s-todo-frontend","namespace":"default","resourceVersion":"19753463","uid":"c32e6e8b-b509-4590-ab24-da6afbef55b4"},"spec":{"build":{"env":[{"name":"BP_OCI_DESCRIPTION","value":"k8s-todo-app Application"},{"name":"BP_IMAGE_LABELS","value":"relise=\"k8s-todo-frontend v0.22.2 - 18.aout.2021\""},{"name":"BP_OCI_AUTHORS","value":"Tanzu-South-EMEA"},{"name":"BP_OCI_TITLE","value":"Spring Boot k8s-todo-frontend"},{"name":"BP_OCI_DOCUMENTATION","value":"updated on 2021-08-18-16:15"},{"name":"BP_NGINX_VERSION","value":"1.21.0"}],"resources":{}},"builder":{"kind":"ClusterBuilder","name":"default"},"cacheSize":"2G","failedBuildHistoryLimit":10,"imageTaggingStrategy":"BuildNumber","serviceAccount":"default","source":{"registry":{"image":"harbor.withtanzu.com/pa-dburkhalter/k8s-todo-frontend-source@sha256:086b29366fe48440dbd19cfd6dd2e0d709f849f2fa5ad8c085eb473d4a22641e"}},"successBuildHistoryLimit":10,"tag":"harbor.withtanzu.com/pa-dburkhalter/k8s-todo-frontend"},"status":{"buildCacheName":"k8s-todo-frontend-cache","buildCounter":9,"conditions":[{"lastTransitionTime":"2021-08-18T15:48:45Z","status":"True","type":"Ready"},{"lastTransitionTime":"2021-08-18T15:48:45Z","status":"True","type":"BuilderReady"}],"latestBuildImageGeneration":7,"latestBuildReason":"CONFIG","latestBuildRef":"k8s-todo-frontend-build-9-v2sqk","latestImage":"harbor.withtanzu.com/pa-dburkhalter/k8s-todo-frontend@sha256:afc586a860173af44d7afb19d0ce69cf6045ab3a738b7fcb246ad3e6d674952a","latestStack":"io.buildpacks.stacks.bionic","observedGeneration":7}}
+      {"apiVersion":"kpack.io/v1alpha1","kind":"Image","metadata":{"annotations":{},"creationTimestamp":"2021-08-10T14:17:21Z","generation":23,"managedFields":[{"apiVersion":"kpack.io/v1alpha1","fieldsType":"FieldsV1","fieldsV1":{"f:metadata":{"f:annotations":{".":{},"f:kubectl.kubernetes.io/last-applied-configuration":{}}},"f:spec":{".":{},"f:build":{".":{},"f:env":{},"f:resources":{}},"f:builder":{".":{},"f:kind":{},"f:name":{}},"f:serviceAccount":{},"f:source":{".":{},"f:registry":{".":{},"f:image":{}}},"f:tag":{}}},"manager":"kubectl-client-side-apply","operation":"Update","time":"2021-08-27T07:26:31Z"},{"apiVersion":"kpack.io/v1alpha1","fieldsType":"FieldsV1","fieldsV1":{"f:status":{".":{},"f:buildCacheName":{},"f:buildCounter":{},"f:conditions":{},"f:latestBuildImageGeneration":{},"f:latestBuildReason":{},"f:latestBuildRef":{},"f:latestImage":{},"f:observedGeneration":{}}},"manager":"controller","operation":"Update","time":"2021-09-01T09:49:16Z"}],"name":"k8s-todo-frontend","namespace":"default","resourceVersion":"45720046","uid":"c32e6e8b-b509-4590-ab24-da6afbef55b4"},"spec":{"build":{"env":[{"name":"BP_OCI_DESCRIPTION","value":"k8s-todo-app frontend Application"},{"name":"BP_IMAGE_LABELS","value":"io.packeto.example=\"Adding our Custom Labels\" relise=\"k8s-todo-frontend-v0.30.1-2021-09-01\" io.packeto.maintainer=\"semea-team\""},{"name":"BP_OCI_AUTHORS","value":"Tanzu-South-EMEA"},{"name":"BP_OCI_TITLE","value":"Vue.js k8s-todo-frontend"},{"name":"BP_OCI_DOCUMENTATION","value":"updated on 2021-09-01-09:55"},{"name":"BP_NGINX_VERSION","value":"1.21.2"},{"name":"BP_OCI_SOURCE","value":"https://github.com/dburkhalter-pivotal/k8s-todo-app.git"},{"name":"BP_OCI_VERSION","value":"v0.30.1 - 2021-09-01"}],"resources":{}},"builder":{"kind":"ClusterBuilder","name":"default"},"cacheSize":"2G","failedBuildHistoryLimit":10,"imageTaggingStrategy":"BuildNumber","serviceAccount":"default","source":{"registry":{"image":"harbor.withtanzu.com/pa-dburkhalter/k8s-todo-frontend-source@sha256:28ccf4ee82aeef16a01982e2616d9db18c8686ba82e4f087d42328a8ce77ec88"}},"successBuildHistoryLimit":10,"tag":"harbor.withtanzu.com/pa-dburkhalter/k8s-todo-frontend"},"status":{"buildCacheName":"k8s-todo-frontend-cache","buildCounter":24,"conditions":[{"lastTransitionTime":"2021-09-01T09:49:16Z","status":"False","type":"Ready"},{"lastTransitionTime":"2021-09-01T09:49:16Z","status":"True","type":"BuilderReady"}],"latestBuildImageGeneration":23,"latestBuildReason":"CONFIG","latestBuildRef":"k8s-todo-frontend-build-24-w9wkx","latestImage":"harbor.withtanzu.com/pa-dburkhalter/k8s-todo-frontend@sha256:3fde6c72c0055e9c08440ebc5463c4bdc65c6ef16e05e413dea85d41acf9da46","observedGeneration":23}}
   creationTimestamp: "2021-08-10T14:17:21Z"
-  generation: 8
+  generation: 24
   managedFields:
   - apiVersion: kpack.io/v1alpha1
     fieldsType: FieldsV1
@@ -33,7 +33,7 @@ metadata:
         f:tag: {}
     manager: kubectl-client-side-apply
     operation: Update
-    time: "2021-08-10T14:17:21Z"
+    time: "2021-08-27T07:26:31Z"
   - apiVersion: kpack.io/v1alpha1
     fieldsType: FieldsV1
     fieldsV1:
@@ -50,26 +50,31 @@ metadata:
         f:observedGeneration: {}
     manager: controller
     operation: Update
-    time: "2021-08-18T15:27:34Z"
+    time: "2021-09-01T09:51:09Z"
   name: k8s-todo-frontend
   namespace: default
-  resourceVersion: "20728664"
+  resourceVersion: "45722848"
   uid: c32e6e8b-b509-4590-ab24-da6afbef55b4
 spec:
   build:
     env:
     - name: BP_OCI_DESCRIPTION
-      value: k8s-todo-app Application
+      value: k8s-todo-app frontend Application
     - name: BP_IMAGE_LABELS
-      value: relise="k8s-todo-frontend v0.22.2 - 18.aout.2021"
+      value: io.packeto.example="Adding our Custom Labels" relise="k8s-todo-frontend-v0.30.1-2021-09-01"
+        io.packeto.maintainer="semea-team"
     - name: BP_OCI_AUTHORS
       value: Tanzu-South-EMEA
     - name: BP_OCI_TITLE
-      value: Spring Boot k8s-todo-frontend
+      value: Vue.js k8s-todo-frontend
     - name: BP_OCI_DOCUMENTATION
-      value: updated on 2021-08-18-16:15
+      value: updated on 2021-09-01-09:55
     - name: BP_NGINX_VERSION
-      value: 1.21.0
+      value: 1.21.2
+    - name: BP_OCI_SOURCE
+      value: https://github.com/dburkhalter-pivotal/k8s-todo-app.git
+    - name: BP_OCI_VERSION
+      value: v0.30.1 - 2021-09-01
     resources: {}
   builder:
     kind: ClusterBuilder
@@ -80,22 +85,22 @@ spec:
   serviceAccount: default
   source:
     registry:
-      image: harbor.withtanzu.com/pa-dburkhalter/k8s-todo-frontend-source@sha256:086b29366fe48440dbd19cfd6dd2e0d709f849f2fa5ad8c085eb473d4a22641e
+      image: harbor.withtanzu.com/pa-dburkhalter/k8s-todo-frontend-source@sha256:658531e0d3a1733874307786f805de5c13a25a69373e32c9622b9d9c3ce55e6d
   successBuildHistoryLimit: 10
   tag: harbor.withtanzu.com/pa-dburkhalter/k8s-todo-frontend
 status:
   buildCacheName: k8s-todo-frontend-cache
-  buildCounter: 10
+  buildCounter: 25
   conditions:
-  - lastTransitionTime: "2021-08-19T07:51:01Z"
+  - lastTransitionTime: "2021-09-01T09:51:09Z"
     status: "True"
     type: Ready
-  - lastTransitionTime: "2021-08-19T07:51:01Z"
+  - lastTransitionTime: "2021-09-01T09:51:09Z"
     status: "True"
     type: BuilderReady
-  latestBuildImageGeneration: 8
+  latestBuildImageGeneration: 24
   latestBuildReason: CONFIG
-  latestBuildRef: k8s-todo-frontend-build-10-bfq7k
-  latestImage: harbor.withtanzu.com/pa-dburkhalter/k8s-todo-frontend@sha256:6e260803945c2dcd86aacb7a5ef4ba071e09eec5de0c5fe93a17a43f6f6349a7
+  latestBuildRef: k8s-todo-frontend-build-25-jdvdl
+  latestImage: harbor.withtanzu.com/pa-dburkhalter/k8s-todo-frontend@sha256:b34d07494eb707b4abc38ddaa831bea0a705c3c441112cc435b6e90f24a20763
   latestStack: io.buildpacks.stacks.bionic
-  observedGeneration: 8
+  observedGeneration: 24

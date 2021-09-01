@@ -1,5 +1,8 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
+#
+# https://github.com/vmware-tanzu/projects-operator/tree/9dfb5ff0389b617c03ef481691f000c914642968
+#
 # kl apply -f tbs/tbs-cluster-role.yaml
 #
 metadata:
