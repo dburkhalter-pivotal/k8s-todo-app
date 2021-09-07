@@ -323,7 +323,7 @@ body {
 	border-color: #CE4646;
 }
 
-.clear-completed,
+clear-completed,
 html .clear-completed:active {
 	float: right;
 	position: relative;

@@ -32,7 +32,7 @@ import org.slf4j.LoggerFactory;
 @SpringBootApplication
 public class Application {
 
-    final static String RELISE = "Application v0.27.1 - 25.aout.2021 - 14:19";
+    final static String RELISE = "Application v0.28.0 - 7.septembre.2021 - 10:30";
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
 

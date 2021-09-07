@@ -3,9 +3,9 @@ kind: Image
 metadata:
   annotations:
     kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"kpack.io/v1alpha1","kind":"Image","metadata":{"annotations":{},"creationTimestamp":"2021-08-10T09:15:21Z","generation":7,"managedFields":[{"apiVersion":"kpack.io/v1alpha1","fieldsType":"FieldsV1","fieldsV1":{"f:metadata":{"f:annotations":{".":{},"f:kubectl.kubernetes.io/last-applied-configuration":{}}},"f:spec":{".":{},"f:build":{".":{},"f:env":{},"f:resources":{}},"f:builder":{".":{},"f:kind":{},"f:name":{}},"f:serviceAccount":{},"f:source":{".":{},"f:blob":{".":{},"f:url":{}}},"f:tag":{}}},"manager":"kubectl-client-side-apply","operation":"Update","time":"2021-08-11T14:48:39Z"},{"apiVersion":"kpack.io/v1alpha1","fieldsType":"FieldsV1","fieldsV1":{"f:status":{".":{},"f:buildCacheName":{},"f:buildCounter":{},"f:conditions":{},"f:latestBuildImageGeneration":{},"f:latestBuildReason":{},"f:latestBuildRef":{},"f:latestImage":{},"f:latestStack":{},"f:observedGeneration":{}}},"manager":"controller","operation":"Update","time":"2021-08-19T09:49:32Z"}],"name":"k8s-todo-backend","namespace":"default","resourceVersion":"20863946","uid":"d83cef6f-daed-4da9-9552-05ceb35d2e68"},"spec":{"build":{"env":[{"name":"BP_JVM_VERSION","value":"16.*"},{"name":"BP_OCI_DESCRIPTION","value":"k8s-todo-app backend Application"},{"name":"BP_IMAGE_LABELS","value":"relise=\"k8s-todo-backend-v0.25.0-2021-08-19\" io.packeto.maintainer=\"myself\""},{"name":"BP_OCI_AUTHORS","value":"Tanzu-South-EMEA-se-team"},{"name":"BP_OCI_TITLE","value":"k8s-todo-backend"},{"name":"JBP_LOG_LEVEL","value":"debug"},{"name":"BP_OCI_DOCUMENTATION","value":"updated on 2021-08-19"},{"name":"BP_OCI_SOURCE","value":"https://github.com/dburkhalter-pivotal/k8s-todo-app.git"},{"name":"BP_DEBUG_ENABLED","value":"true"},{"name":"BPL_DEBUG_ENABLED","value":"true"},{"name":"BPE_OVERRIDE_BPL_JVM_THREAD_COUNT","value":"150"},{"name":"BP_JMX_ENABLED","value":"true"},{"name":"BPE_DELIM_JAVA_TOOL_OPTIONS","value":" "},{"name":"BPE_APPEND_JAVA_TOOL_OPTIONS","value":" -XX:+UseContainerSupport -Duser.timezone=CET -DRELISE=k8s-todo-backend_2021-08-19_v0.23.0 -Dspring.devtools.restart.enabled=true -XX:MaxDirectMemorySize=64M -XX:+UnlockExperimentalVMOptions "},{"name":"BPL_JVM_HEAD_ROOM","value":"15"},{"name":"BPL_SPRING_CLOUD_BINDINGS_ENABLED","value":"y"},{"name":"BPE_PREPEND_JAVA_TOOL_OPTIONS","value":" -Xss512k -XX:+PrintFlagsFinal "}],"resources":{}},"builder":{"kind":"ClusterBuilder","name":"full"},"cacheSize":"2G","failedBuildHistoryLimit":10,"imageTaggingStrategy":"BuildNumber","serviceAccount":"default","source":{"blob":{"url":"https://artifactory.withtanzu.com/artifactory/pa-dburkhalter/k8s-todo-backend.jar"}},"successBuildHistoryLimit":10,"tag":"harbor.withtanzu.com/pa-dburkhalter/k8s-todo-backend"},"status":{"buildCacheName":"k8s-todo-backend-cache","buildCounter":9,"conditions":[{"lastTransitionTime":"2021-08-19T09:49:32Z","status":"True","type":"Ready"},{"lastTransitionTime":"2021-08-19T09:49:32Z","status":"True","type":"BuilderReady"}],"latestBuildImageGeneration":7,"latestBuildReason":"CONFIG","latestBuildRef":"k8s-todo-backend-build-9-c5q28","latestImage":"harbor.withtanzu.com/pa-dburkhalter/k8s-todo-backend@sha256:6d1de6dda41d3e456abd2f93e2c8fc3628100f77eb1eaddcf768f3b5d9e2c4e4","latestStack":"io.buildpacks.stacks.bionic","observedGeneration":7}}
+      {"apiVersion":"kpack.io/v1alpha1","kind":"Image","metadata":{"annotations":{},"creationTimestamp":"2021-08-10T09:15:21Z","generation":9,"managedFields":[{"apiVersion":"kpack.io/v1alpha1","fieldsType":"FieldsV1","fieldsV1":{"f:metadata":{"f:annotations":{".":{},"f:kubectl.kubernetes.io/last-applied-configuration":{}}},"f:spec":{".":{},"f:build":{".":{},"f:env":{},"f:resources":{}},"f:builder":{".":{},"f:kind":{},"f:name":{}},"f:serviceAccount":{},"f:source":{".":{},"f:blob":{".":{},"f:url":{}}},"f:tag":{}}},"manager":"kubectl-client-side-apply","operation":"Update","time":"2021-08-11T14:48:39Z"},{"apiVersion":"kpack.io/v1alpha1","fieldsType":"FieldsV1","fieldsV1":{"f:status":{".":{},"f:buildCacheName":{},"f:buildCounter":{},"f:conditions":{},"f:latestBuildImageGeneration":{},"f:latestBuildReason":{},"f:latestBuildRef":{},"f:latestImage":{},"f:latestStack":{},"f:observedGeneration":{}}},"manager":"controller","operation":"Update","time":"2021-08-31T18:17:22Z"}],"name":"k8s-todo-backend","namespace":"default","resourceVersion":"46622443","uid":"d83cef6f-daed-4da9-9552-05ceb35d2e68"},"spec":{"build":{"env":[{"name":"BP_JVM_VERSION","value":"16.*"},{"name":"BP_OCI_DESCRIPTION","value":"k8s-todo-app backend Application"},{"name":"BP_IMAGE_LABELS","value":"relise=\"k8s-todo-backend-v0.28.0-2021-09-07\" io.packeto.maintainer=\"myself\""},{"name":"BP_OCI_AUTHORS","value":"Tanzu-South-EMEA-se-team"},{"name":"BP_OCI_TITLE","value":"k8s-todo-backend"},{"name":"JBP_LOG_LEVEL","value":"debug"},{"name":"BP_OCI_DOCUMENTATION","value":"updated on 2021-09-07"},{"name":"BP_OCI_SOURCE","value":"https://github.com/dburkhalter-pivotal/k8s-todo-app.git"},{"name":"BP_DEBUG_ENABLED","value":"true"},{"name":"BPL_DEBUG_ENABLED","value":"true"},{"name":"BPE_OVERRIDE_BPL_JVM_THREAD_COUNT","value":"150"},{"name":"BP_JMX_ENABLED","value":"true"},{"name":"BPE_DELIM_JAVA_TOOL_OPTIONS","value":" "},{"name":"BPE_APPEND_JAVA_TOOL_OPTIONS","value":" -XX:+UseZGC -XX:+UseContainerSupport -Duser.timezone=CET -DRELISE=k8s-todo-backend_2021-08-23_v0.27.1 -Dspring.devtools.restart.enabled=true -XX:MaxDirectMemorySize=64M -XX:+UnlockExperimentalVMOptions "},{"name":"BPL_JVM_HEAD_ROOM","value":"15"},{"name":"BPL_SPRING_CLOUD_BINDINGS_ENABLED","value":"y"},{"name":"BPE_PREPEND_JAVA_TOOL_OPTIONS","value":" -Xss512k "},{"name":"BP_OCI_VERSION","value":"v0.28.0-2021-09-07"}],"resources":{}},"builder":{"kind":"ClusterBuilder","name":"full"},"cacheSize":"2G","failedBuildHistoryLimit":10,"imageTaggingStrategy":"BuildNumber","serviceAccount":"default","source":{"blob":{"url":"https://artifactory.withtanzu.com/artifactory/pa-dburkhalter/k8s-todo-backend.jar"}},"successBuildHistoryLimit":10,"tag":"harbor.withtanzu.com/pa-dburkhalter/k8s-todo-backend"},"status":{"buildCacheName":"k8s-todo-backend-cache","buildCounter":15,"conditions":[{"lastTransitionTime":"2021-09-01T20:14:34Z","status":"True","type":"Ready"},{"lastTransitionTime":"2021-09-01T20:14:34Z","status":"True","type":"BuilderReady"}],"latestBuildImageGeneration":9,"latestBuildReason":"BUILDPACK","latestBuildRef":"k8s-todo-backend-build-15-l8wp2","latestImage":"harbor.withtanzu.com/pa-dburkhalter/k8s-todo-backend@sha256:0656ac038ba2f5722b3ee85d8bb6ddaa8197dd8c0828bcf808216c84ac932f75","latestStack":"io.buildpacks.stacks.bionic","observedGeneration":9}}
   creationTimestamp: "2021-08-10T09:15:21Z"
-  generation: 8
+  generation: 10
   managedFields:
   - apiVersion: kpack.io/v1alpha1
     fieldsType: FieldsV1
@@ -50,10 +50,10 @@ metadata:
         f:observedGeneration: {}
     manager: controller
     operation: Update
-    time: "2021-08-19T15:12:27Z"
+    time: "2021-09-07T08:42:06Z"
   name: k8s-todo-backend
   namespace: default
-  resourceVersion: "21232051"
+  resourceVersion: "57369623"
   uid: d83cef6f-daed-4da9-9552-05ceb35d2e68
 spec:
   build:
@@ -63,7 +63,8 @@ spec:
     - name: BP_OCI_DESCRIPTION
       value: k8s-todo-app backend Application
     - name: BP_IMAGE_LABELS
-      value: relise="k8s-todo-backend-v0.27.1-2021-08-23" io.packeto.maintainer="myself"
+      value: relise="k8s-todo-backend-v0.28.1-2021-09-07" io.packeto.maintainer="platform-team"
+        maintainer="product-team"
     - name: BP_OCI_AUTHORS
       value: Tanzu-South-EMEA-se-team
     - name: BP_OCI_TITLE
@@ -71,7 +72,7 @@ spec:
     - name: JBP_LOG_LEVEL
       value: debug
     - name: BP_OCI_DOCUMENTATION
-      value: updated on 2021-08-23
+      value: updated on 2021-09-07
     - name: BP_OCI_SOURCE
       value: https://github.com/dburkhalter-pivotal/k8s-todo-app.git
     - name: BP_DEBUG_ENABLED
@@ -85,7 +86,7 @@ spec:
     - name: BPE_DELIM_JAVA_TOOL_OPTIONS
       value: ' '
     - name: BPE_APPEND_JAVA_TOOL_OPTIONS
-      value: ' -XX:+UseZGC -XX:+UseContainerSupport -Duser.timezone=CET -DRELISE=k8s-todo-backend_2021-08-23_v0.27.1
+      value: ' -XX:+UseZGC -XX:+UseContainerSupport -Duser.timezone=CET -DRELISE=k8s-todo-backend_v0.28.1-2021-09-07
         -Dspring.devtools.restart.enabled=true -XX:MaxDirectMemorySize=64M -XX:+UnlockExperimentalVMOptions '
     - name: BPL_JVM_HEAD_ROOM
       value: "15"
@@ -93,6 +94,8 @@ spec:
       value: "y"
     - name: BPE_PREPEND_JAVA_TOOL_OPTIONS
       value: ' -Xss512k '
+    - name: BP_OCI_VERSION
+      value: v0.28.1-2021-09-07
     resources: {}
   builder:
     kind: ClusterBuilder
@@ -108,17 +111,17 @@ spec:
   tag: harbor.withtanzu.com/pa-dburkhalter/k8s-todo-backend
 status:
   buildCacheName: k8s-todo-backend-cache
-  buildCounter: 10
+  buildCounter: 16
   conditions:
-  - lastTransitionTime: "2021-08-19T15:12:27Z"
+  - lastTransitionTime: "2021-09-07T08:42:06Z"
     status: "True"
     type: Ready
-  - lastTransitionTime: "2021-08-19T15:12:27Z"
+  - lastTransitionTime: "2021-09-07T08:42:06Z"
     status: "True"
     type: BuilderReady
-  latestBuildImageGeneration: 8
-  latestBuildReason: CONFIG,STACK
-  latestBuildRef: k8s-todo-backend-build-10-gdkt5
-  latestImage: harbor.withtanzu.com/pa-dburkhalter/k8s-todo-backend@sha256:0cad0eb021b4493e0f2b41cfa3661cb5c86cf29f7483c5235cfbed2b4d31ca3f
+  latestBuildImageGeneration: 10
+  latestBuildReason: CONFIG
+  latestBuildRef: k8s-todo-backend-build-16-hskbg
+  latestImage: harbor.withtanzu.com/pa-dburkhalter/k8s-todo-backend@sha256:5003ec12183f9cee1d5088c0d99ff17e639f639c692700b7874ce5d5e253e341
   latestStack: io.buildpacks.stacks.bionic
-  observedGeneration: 8
+  observedGeneration: 10

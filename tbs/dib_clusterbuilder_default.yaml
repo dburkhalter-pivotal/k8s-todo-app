@@ -1,0 +1,149 @@
+apiVersion: build.pivotal.io/v1alpha1
+kind: ClusterBuilder
+metadata:
+  name: default-builder
+spec:
+  image: gcr.io/paketo-buildpacks/builder:full-cf
+  updatePolicy: polling
+#
+apiVersion: kpack.io/v1alpha1
+kind: ClusterBuilder
+metadata:
+  annotations:
+    kpack.io/import-timestamp: "2021-09-03T12:12:12Z"
+    kubectl.kubernetes.io/last-applied-configuration: '{"kind":"ClusterBuilder","apiVersion":"kpack.io/v1alpha1","metadata":{"name":"dib-default","creationTimestamp":null},"spec":{"tag":"harbor.withtanzu.com/pa-dburkhalter/build-service/dib-default","stack":{"kind":"ClusterStack","name":"base"},"store":{"kind":"ClusterStore","name":"default"},"order":[{"group":[{"id":"tanzu-buildpacks/dotnet-core"}]},{"group":[{"id":"tanzu-buildpacks/nodejs"}]},{"group":[{"id":"tanzu-buildpacks/go"}]},{"group":[{"id":"tanzu-buildpacks/python"}]},{"group":[{"id":"tanzu-buildpacks/nginx"}]},{"group":[{"id":"tanzu-buildpacks/java-native-image"}]},{"group":[{"id":"tanzu-buildpacks/java"}]},{"group":[{"id":"paketo-buildpacks/procfile"}]}],"serviceAccountRef":{"namespace":"kpack","name":"canonical-registry-serviceaccount"}},"status":{"stack":{}}}'
+  creationTimestamp: "2021-09-03T12:12:12Z"
+  generation: 2
+  managedFields:
+  - apiVersion: kpack.io/v1alpha1
+    
+    manager: controller
+    operation: Update
+    time: "2021-08-05T09:02:58Z"
+  - apiVersion: kpack.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kpack.io/import-timestamp: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:serviceAccountRef:
+          .: {}
+          f:name: {}
+          f:namespace: {}
+        f:stack:
+          .: {}
+          f:kind: {}
+          f:name: {}
+        f:store:
+          .: {}
+          f:kind: {}
+          f:name: {}
+        f:tag: {}
+    manager: dependency-updater
+    operation: Update
+    time: "2021-09-01T20:14:34Z"
+  - apiVersion: kpack.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:order: {}
+    manager: kubectl-edit
+    operation: Update
+    time: "2021-09-02T12:06:33Z"
+  name: dib-default
+#
+spec:
+  order:
+# my order
+  - group:
+    - id: paketo-buildpacks/nginx
+    - id: paketo-buildpacks/image-labels
+  - group:
+    - id: tanzu-buildpacks/java
+  serviceAccountRef:
+    name: canonical-registry-serviceaccount
+    namespace: kpack
+  stack:
+    kind: ClusterStack
+    name: base
+  store:
+    kind: ClusterStore
+    name: dib-default
+  tag: harbor.withtanzu.com/pa-dburkhalter/build-service/dib-default
+status:
+  builderMetadata:
+  - homepage: https://github.com/paketo-buildpacks/bellsoft-liberica
+    id: paketo-buildpacks/bellsoft-liberica
+    version: 8.4.0
+
+  - homepage: https://github.com/paketo-buildpacks/nginx
+    id: paketo-buildpacks/nginx
+    version: 0.3.2
+  - homepage: https://github.com/paketo-buildpacks/spring-boot
+    id: paketo-buildpacks/spring-boot
+    version: 4.5.0
+  - homepage: https://github.com/pivotal-cf/tanzu-jacoco
+    id: tanzu-buildpacks/jacoco
+    version: 3.2.0
+  - homepage: https://github.com/pivotal-cf/tanzu-synopsys
+    id: tanzu-buildpacks/synopsys
+    version: 3.2.0
+  - homepage: https://github.com/paketo-buildpacks/ca-certificates
+    id: paketo-buildpacks/ca-certificates
+    version: 2.4.0
+  - homepage: https://github.com/paketo-buildpacks/ca-certificates
+    id: paketo-buildpacks/ca-certificates
+    version: 2.3.2
+  - homepage: https://github.com/paketo-buildpacks/encrypt-at-rest
+    id: paketo-buildpacks/encrypt-at-rest
+    version: 3.2.0
+  - id: tanzu-buildpacks/yarn-install
+    version: 0.2.1
+  - homepage: https://github.com/paketo-buildpacks/debug
+    id: paketo-buildpacks/debug
+    version: 3.2.0
+  - homepage: https://github.com/paketo-buildpacks/jmx
+    id: paketo-buildpacks/jmx
+    version: 3.2.0
+  - homepage: https://github.com/paketo-buildpacks/native-image
+    id: paketo-buildpacks/native-image
+    version: 4.3.0
+  - homepage: https://github.com/paketo-buildpacks/executable-jar
+    id: paketo-buildpacks/executable-jar
+    version: 5.2.0
+  - homepage: https://github.com/paketo-buildpacks/environment-variables
+    id: paketo-buildpacks/environment-variables
+    version: 3.2.0
+  - homepage: https://github.com/paketo-buildpacks/image-labels
+    id: paketo-buildpacks/image-labels
+    version: 3.2.0
+  - homepage: https://github.com/paketo-buildpacks/dist-zip
+    id: paketo-buildpacks/dist-zip
+    version: 4.2.0
+  - homepage: https://github.com/paketo-buildpacks/image-labels
+    id: paketo-buildpacks/image-labels
+    version: 3.1.2
+  - homepage: https://github.com/pivotal-cf/tanzu-java
+    id: tanzu-buildpacks/java
+    version: 5.13.0
+  latestImage: harbor.withtanzu.com/pa-dburkhalter/build-service/default@sha256:035139f8eda2891130388555c6329e5a0f1d7668167290fe852de13282d1647f
+  observedGeneration: 6
+  observedStackGeneration: 4
+  observedStoreGeneration: 7
+  order:
+  - group:
+    - id: paketo-buildpacks/nginx
+      version: 0.3.2
+    - id: paketo-buildpacks/image-labels
+      version: 3.2.0
+  - group:
+    - id: tanzu-buildpacks/java
+      version: 5.13.0
+  os: linux
+  stack:
+    id: io.buildpacks.stacks.bionic
+    runImage: harbor.withtanzu.com/pa-dburkhalter/build-service/run@sha256:9cb1909dbe23818f37f91cf9f3cd7d0c2748b6e07c2093169b3fd15591feff27

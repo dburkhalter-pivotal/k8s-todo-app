@@ -23,7 +23,7 @@ package-frontend: build-frontend
 # then upload jar to artifactory
 package-backend: build-backend
 	cd backend && ./mvnw -DskipTests spring-boot:build-image -Dspring-boot.build-image.imageName=${IMAGE_REPOSITORY}/k8s-todo-backend
-	curl -X PUT -uadmin:HuvmVGCm56utAAv -T backend/target/k8s-todo-backend.jar "https://artifactory.withtanzu.com/artifactory/pa-dburkhalter/k8s-todo-backend.jar" -k -vv
+#	curl -X PUT -uadmin: -T backend/target/k8s-todo-backend.jar "https://artifactory.withtanzu.com/artifactory/pa-dburkhalter/k8s-todo-backend.jar" -k -vv
 
 # Use this task to generate a zip file you may want to use with kpack / TBS
 # when building an image.

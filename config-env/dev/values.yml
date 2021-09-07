@@ -2,14 +2,14 @@
 ---
 NAMESPACE: todo-dev
 DOMAIN: dev.k8s-todo.haas-420.pez.vmware.com
-#! dib - v0.30.1 - 1.septembre
+#! dib - v0.30.1 - 7.septembre
 #! /Users/dburkhalter/iena/pivotal/github/k8s-todo-app/config-env/dev/values.yml
 #! ytt -f config -f config-env/dev | kubectl apply -f -
 #! docker pull harbor.withtanzu.com/pa-dburkhalter/k8s-todo-backend:b4.20210811.023853
 #! use this field to enrich the "app.kubernetes.io/version": image_tag_for_component(comp),
 IMAGES:
-#! 1.septembre
-  frontend: b26.20210901.103940
+#! 7.septembre
+  frontend: b31.20210907.085340
 #! get info from kp  build logs k8s-todo-backend
-#! 25.aout
-  backend: b15.20210831.175841
+#! 7.septembre
+  backend: b17.20210907.104135
